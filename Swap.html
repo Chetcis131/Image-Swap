@@ -26,6 +26,10 @@
         pics[0] = "c130.jpeg";
         pics[1] = "warthog.jpeg";
         pics[2] = "USAF_logo.png";
+        pics[3] = "c5.jpg";
+        pics[4] = "thunderbirds.jpg";
+        pics[5] = "f35.jpg";
+        pics[6] = "b2.jpg";
         var currentpic = 0;
         var lastpic = pics.length-1;
         function nextslide()
@@ -43,14 +47,18 @@
         }
     </script>   
 
-    <body>
+    <body background= green>
         <div class="main">
-            <img src="c130.jpeg" id="slide" onclick="nextslide()">
+            <img src="thunderbirds.jpg" id="slide" onclick="nextslide()">
         </div> 
         <div class="thumbs">
             <img src="c130.jpeg" alt="gunship">
             <img src="warthog.jpeg" alt="a10">
             <img src="USAF_logo.png" alt="AF">
+            <img src="c5.jpg" alt="c5">
+            <img src="thunderbirds.jpg" alt="thunderbird">
+            <img src="f35.jpg" alt="f35">
+            <img src="b2.jpg" alt="b2">
         </div>       
     </body>
 </html>
