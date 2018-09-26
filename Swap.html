@@ -19,17 +19,10 @@
             cursor: pointer;
         }
     </style>
-    
-    
+        
     <script type="text/javascript">
-        var pics = new Array();
-        pics[0] = "c130.jpeg";
-        pics[1] = "warthog.jpeg";
-        pics[2] = "USAF_logo.png";
-        pics[3] = "c5.jpg";
-        pics[4] = "thunderbirds.jpg";
-        pics[5] = "f35.jpg";
-        pics[6] = "b2.jpg";
+        var pics = new Array("c130.jpeg", "warthog.jpeg", "USAF_logo.png", "c5.jpg", "thunderbirds.jpg", "f35.jpg", "b2.jpg");
+        
         var currentpic = 0;
         var lastpic = pics.length-1;
         function nextslide()
@@ -47,7 +40,7 @@
         }
     </script>   
 
-    <body background= green>
+    <body >
         <div class="main">
             <img src="thunderbirds.jpg" id="slide" onclick="nextslide()">
         </div> 
