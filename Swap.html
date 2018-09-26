@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+          
+    </head>
+    <title>Image Swap</title>
+    
+    <style>
+        .main img 
+        {
+            width: 500px;
+            height: 500px;
+        }
+        
+        .thumbs img 
+        {
+            width: 175px;
+            height: 150px;
+            cursor: pointer;
+        }
+    </style>
+    
+    
+    <script type="text/javascript">
+        var pics = new Array();
+        pics[0] = "c130.jpeg";
+        pics[1] = "warthog.jpeg";
+        pics[2] = "USAF_logo.png";
+        var currentpic = 0;
+        var lastpic = pics.length-1;
+        function nextslide()
+        {
+            if (currentpic == lastpic)
+            {
+                currentpic = 0;
+                document.getElementById('slide').src = pics[currentpic];
+            }
+            else
+            {
+                currentpic++;
+                document.getElementById('slide').src = pics[currentpic];
+            }
+        }
+    </script>   
+
+    <body>
+        <div class="main">
+            <img src="c130.jpeg" id="slide" onclick="nextslide()">
+        </div> 
+        <div class="thumbs">
+            <img src="c130.jpeg" alt="gunship">
+            <img src="warthog.jpeg" alt="a10">
+            <img src="USAF_logo.png" alt="AF">
+        </div>       
+    </body>
+</html>
