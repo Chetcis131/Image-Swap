@@ -22,7 +22,6 @@
         
     <script type="text/javascript">
         var pics = new Array("c130.jpeg", "warthog.jpeg", "USAF_logo.png", "c5.jpg", "thunderbirds.jpg", "f35.jpg", "b2.jpg");
-        
         var currentpic = 0;
         var lastpic = pics.length-1;
         function nextslide()
@@ -38,13 +37,34 @@
                 document.getElementById('slide').src = pics[currentpic];
             }
         }
+        function slideshow()
+{
+    
+    
+    function displayNextImage() {
+        x = (x === images.length - 1) ? 0 : x + 1;
+        document.getElementById("img-showcase").src = images[x];
+    }
+
+    function startTimer() {
+        setInterval(displayNextImage, 3000);
+    }
+
+ 
+ // this function is called when the onclick event runs. It stops the timer running.
+ function stop(){
+ clearInterval(timer); //the clearInterval method stops the timer from running
+ }
+}
+    
+    
     </script>   
 
     <body >
         <div class="main">
             <img src="thunderbirds.jpg" id="slide" onclick="nextslide()">
         </div> 
-        <div class="thumbs">
+        <div class="thumbs" onload="startTimer()">
             <img src="c130.jpeg" alt="gunship">
             <img src="warthog.jpeg" alt="a10">
             <img src="USAF_logo.png" alt="AF">
